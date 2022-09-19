@@ -1,0 +1,6 @@
+framework module Pods_iOS_public_mobile_palette_Tests {
+  umbrella header "Pods-iOS-public-mobile-palette_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

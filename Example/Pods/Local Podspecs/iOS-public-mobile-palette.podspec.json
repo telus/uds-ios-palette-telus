@@ -1,0 +1,22 @@
+{
+  "name": "iOS-public-mobile-palette",
+  "version": "0.1.0",
+  "summary": "A short description of iOS-public-mobile-palette.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/20618497/iOS-public-mobile-palette",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "20618497": "akshay.pandey@telus.com"
+  },
+  "source": {
+    "git": "https://github.com/20618497/iOS-public-mobile-palette.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "iOS-public-mobile-palette/Classes/**/*"
+}
