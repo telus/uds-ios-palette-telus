@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   Refer the UDS project here: https://github.com/telus/universal-design-system.
                        DESC
 
-  s.homepage         = 'https://github.com/telus/universal-design-system'
+  s.homepage         = 'https://github.com/telus/iOS-public-mobile-palette'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '20618497' => 'akshay.pandey@telus.com' }
