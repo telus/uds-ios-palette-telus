@@ -1,0 +1,30 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+      # Add any backport branches here that should also be released
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # PRIVATE_DEPLOY_KEY is the private rsa key, the public key is configured as a deploy key in the repo settings
+          # This allows commits and tags to be pushed back to main (a protected branch)
+          ssh-key: ${{ secrets.PRIVATE_DEPLOY_KEY }}
+
+      - name: Publish
+        id: publish
+        run: |
+          npm install -g podspec-bump
+          podspec-bump -w
+          git commit -am "bump `podspec-bump --dump-version`"
+          git push
+          git tag "`podspec-bump --dump-version`"
+          git push --tags
+          pod trunk register akshay.pandey@telus.com 'Akshay Pandey' --description='macbook air'
+          pod trunk push --allow-warnings
